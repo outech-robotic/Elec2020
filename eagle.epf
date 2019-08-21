@@ -1,6 +1,6 @@
 [Eagle]
 Version="09 04 02"
-Platform="Linux"
+Platform="Windows"
 Globals="Globals"
 Desktop="Desktop"
 
@@ -270,5 +270,5 @@ Type="Control Panel"
 Number=0
 
 [Desktop]
-Screen="3840 1080"
+Screen="3440 1440"
 Window="Win_1"

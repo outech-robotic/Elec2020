@@ -1155,17 +1155,17 @@ Source: &lt;a href="https://cdn.harwin.com/pdfs/M20-876.pdf"&gt; Datasheet &lt;/
 <part name="C2" library="OUTech" deviceset="06035C104K4T2A" device="" value="100nF"/>
 <part name="R1" library="OUTech" deviceset="CRCW0603120RFKEA" device="" value="120R"/>
 <part name="R2" library="OUTech" deviceset="RK73Z1JTTDB" device="" value="0R"/>
-<part name="J1" library="OUTech" deviceset="43650-0400" device=""/>
-<part name="J2" library="OUTech" deviceset="43650-0400" device=""/>
-<part name="J3" library="OUTech" deviceset="43650-0400" device=""/>
-<part name="J4" library="OUTech" deviceset="43650-0400" device=""/>
-<part name="J5" library="OUTech" deviceset="43650-0200" device=""/>
-<part name="J6" library="OUTech" deviceset="43650-0200" device=""/>
-<part name="J7" library="OUTech" deviceset="43650-0200" device=""/>
-<part name="J8" library="OUTech" deviceset="43650-0200" device=""/>
-<part name="J9" library="OUTech" deviceset="43650-0200" device=""/>
-<part name="J10" library="OUTech" deviceset="43650-0200" device=""/>
-<part name="J11" library="OUTech" deviceset="43650-0200" device=""/>
+<part name="J1" library="OUTech" deviceset="43650-0400" device="" value="CAN"/>
+<part name="J2" library="OUTech" deviceset="43650-0400" device="" value="CAN"/>
+<part name="J3" library="OUTech" deviceset="43650-0400" device="" value="CODD"/>
+<part name="J4" library="OUTech" deviceset="43650-0400" device="" value="CODG"/>
+<part name="J5" library="OUTech" deviceset="43650-0200" device="" value="24V"/>
+<part name="J6" library="OUTech" deviceset="43650-0200" device="" value="24V"/>
+<part name="J7" library="OUTech" deviceset="43650-0200" device="" value="12V"/>
+<part name="J8" library="OUTech" deviceset="43650-0200" device="" value="5V"/>
+<part name="J9" library="OUTech" deviceset="43650-0200" device="" value="5V"/>
+<part name="J10" library="OUTech" deviceset="43650-0200" device="" value="24V"/>
+<part name="J11" library="OUTech" deviceset="43650-0200" device="" value="12V"/>
 <part name="C3" library="OUTech" deviceset="06035C104K4T2A" device="" value="100nF"/>
 <part name="C4" library="OUTech" deviceset="06035C104K4T2A" device="" value="100nF"/>
 <part name="C5" library="OUTech" deviceset="GRM21BR61E475KA12L" device="" value="4.7µF"/>
@@ -1238,6 +1238,11 @@ Source: &lt;a href="https://cdn.harwin.com/pdfs/M20-876.pdf"&gt; Datasheet &lt;/
 <part name="J12" library="OUTech" deviceset="M20-8760542" device=""/>
 <part name="+3V12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND27" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GNDA" device=""/>
+<part name="J13" library="OUTech" deviceset="43650-0200" device="" value="MOTG"/>
+<part name="J14" library="OUTech" deviceset="43650-0200" device="" value="MOTD"/>
+<part name="J15" library="OUTech" deviceset="43650-0200" device="" value="12V"/>
+<part name="GND28" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GNDA" device=""/>
+<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1549,6 +1554,24 @@ Source: &lt;a href="https://cdn.harwin.com/pdfs/M20-876.pdf"&gt; Datasheet &lt;/
 <instance part="GND27" gate="1" x="50.8" y="-76.2" smashed="yes" rot="R270">
 <attribute name="VALUE" x="48.26" y="-73.66" size="1.778" layer="96"/>
 </instance>
+<instance part="J13" gate="G$1" x="-170.18" y="-40.64" smashed="yes">
+<attribute name="NAME" x="-153.67" y="-33.02" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-153.67" y="-35.56" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="J14" gate="G$1" x="-170.18" y="-58.42" smashed="yes">
+<attribute name="NAME" x="-153.67" y="-50.8" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="-153.67" y="-53.34" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="J15" gate="G$1" x="60.96" y="119.38" smashed="yes">
+<attribute name="NAME" x="64.77" y="124.46" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="67.31" y="124.46" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="GND28" gate="1" x="81.28" y="111.76" smashed="yes">
+<attribute name="VALUE" x="83.82" y="109.22" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="P+1" gate="1" x="60.96" y="127" smashed="yes">
+<attribute name="VALUE" x="58.42" y="121.92" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -1582,16 +1605,16 @@ Source: &lt;a href="https://cdn.harwin.com/pdfs/M20-876.pdf"&gt; Datasheet &lt;/
 <label x="137.16" y="-25.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="2"/>
-<junction x="81.28" y="17.78"/>
-<wire x1="81.28" y1="17.78" x2="86.36" y2="17.78" width="0.1524" layer="91"/>
-<label x="86.36" y="17.78" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="3"/>
+<junction x="60.96" y="15.24"/>
+<wire x1="60.96" y1="15.24" x2="55.88" y2="15.24" width="0.1524" layer="91"/>
+<label x="55.88" y="15.24" size="1.778" layer="95" rot="R180"/>
 </segment>
 <segment>
-<pinref part="J2" gate="G$1" pin="2"/>
-<junction x="81.28" y="45.72"/>
-<wire x1="81.28" y1="45.72" x2="86.36" y2="45.72" width="0.1524" layer="91"/>
-<label x="86.36" y="45.72" size="1.778" layer="95"/>
+<pinref part="J2" gate="G$1" pin="3"/>
+<junction x="60.96" y="43.18"/>
+<wire x1="60.96" y1="43.18" x2="55.88" y2="43.18" width="0.1524" layer="91"/>
+<label x="55.88" y="43.18" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="CAN_H" class="0">
@@ -1608,16 +1631,16 @@ Source: &lt;a href="https://cdn.harwin.com/pdfs/M20-876.pdf"&gt; Datasheet &lt;/
 <label x="137.16" y="-17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="3"/>
-<junction x="60.96" y="15.24"/>
-<wire x1="60.96" y1="15.24" x2="55.88" y2="15.24" width="0.1524" layer="91"/>
-<label x="55.88" y="15.24" size="1.778" layer="95" rot="R180"/>
+<pinref part="J1" gate="G$1" pin="2"/>
+<junction x="81.28" y="17.78"/>
+<wire x1="81.28" y1="17.78" x2="86.36" y2="17.78" width="0.1524" layer="91"/>
+<label x="86.36" y="17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J2" gate="G$1" pin="3"/>
-<junction x="60.96" y="43.18"/>
-<wire x1="60.96" y1="43.18" x2="55.88" y2="43.18" width="0.1524" layer="91"/>
-<label x="55.88" y="43.18" size="1.778" layer="95" rot="R180"/>
+<pinref part="J2" gate="G$1" pin="2"/>
+<junction x="81.28" y="45.72"/>
+<wire x1="81.28" y1="45.72" x2="86.36" y2="45.72" width="0.1524" layer="91"/>
+<label x="86.36" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CAN_RX" class="0">
@@ -1707,6 +1730,12 @@ Source: &lt;a href="https://cdn.harwin.com/pdfs/M20-876.pdf"&gt; Datasheet &lt;/
 <wire x1="-119.38" y1="33.02" x2="-127" y2="33.02" width="0.1524" layer="91"/>
 <label x="-127" y="33.02" size="1.778" layer="95" rot="R180"/>
 </segment>
+<segment>
+<pinref part="J13" gate="G$1" pin="2"/>
+<junction x="-149.86" y="-40.64"/>
+<wire x1="-149.86" y1="-40.64" x2="-139.7" y2="-40.64" width="0.1524" layer="91"/>
+<label x="-139.7" y="-40.64" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="FIN_G" class="0">
 <segment>
@@ -1729,6 +1758,12 @@ Source: &lt;a href="https://cdn.harwin.com/pdfs/M20-876.pdf"&gt; Datasheet &lt;/
 <wire x1="-88.9" y1="33.02" x2="-78.74" y2="33.02" width="0.1524" layer="91"/>
 <label x="-78.74" y="33.02" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="J13" gate="G$1" pin="1"/>
+<junction x="-170.18" y="-40.64"/>
+<wire x1="-170.18" y1="-40.64" x2="-177.8" y2="-40.64" width="0.1524" layer="91"/>
+<label x="-177.8" y="-40.64" size="1.778" layer="95" rot="R180"/>
+</segment>
 </net>
 <net name="RIN_G" class="0">
 <segment>
@@ -1750,6 +1785,12 @@ Source: &lt;a href="https://cdn.harwin.com/pdfs/M20-876.pdf"&gt; Datasheet &lt;/
 <junction x="-88.9" y="-2.54"/>
 <wire x1="-88.9" y1="-2.54" x2="-81.28" y2="-2.54" width="0.1524" layer="91"/>
 <label x="-81.28" y="-2.54" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J14" gate="G$1" pin="1"/>
+<junction x="-170.18" y="-58.42"/>
+<wire x1="-170.18" y1="-58.42" x2="-177.8" y2="-58.42" width="0.1524" layer="91"/>
+<label x="-177.8" y="-58.42" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="RIN_D" class="0">
@@ -1787,11 +1828,11 @@ Source: &lt;a href="https://cdn.harwin.com/pdfs/M20-876.pdf"&gt; Datasheet &lt;/
 <wire x1="-119.38" y1="-2.54" x2="-127" y2="-2.54" width="0.1524" layer="91"/>
 <label x="-127" y="-2.54" size="1.778" layer="95" rot="R180"/>
 </segment>
-</net>
-<net name="N$88" class="0">
 <segment>
-<pinref part="IC4" gate="G$1" pin="VCC_1"/>
-<junction x="-119.38" y="0"/>
+<pinref part="J14" gate="G$1" pin="2"/>
+<junction x="-149.86" y="-58.42"/>
+<wire x1="-149.86" y1="-58.42" x2="-139.7" y2="-58.42" width="0.1524" layer="91"/>
+<label x="-139.7" y="-58.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GNDA" class="0">
@@ -2028,6 +2069,13 @@ Source: &lt;a href="https://cdn.harwin.com/pdfs/M20-876.pdf"&gt; Datasheet &lt;/
 <wire x1="63.5" y1="-78.74" x2="63.5" y2="-76.2" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="-76.2" x2="53.34" y2="-76.2" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="GND28" gate="1" pin="GNDA"/>
+<junction x="81.28" y="114.3"/>
+<pinref part="J15" gate="G$1" pin="2"/>
+<junction x="81.28" y="119.38"/>
+<wire x1="81.28" y1="114.3" x2="81.28" y2="119.38" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="+5V" class="0">
 <segment>
@@ -2211,6 +2259,9 @@ Source: &lt;a href="https://cdn.harwin.com/pdfs/M20-876.pdf"&gt; Datasheet &lt;/
 <segment>
 <pinref part="P+6" gate="1" pin="+24V"/>
 <junction x="-119.38" y="5.08"/>
+<pinref part="IC4" gate="G$1" pin="VCC_1"/>
+<junction x="-119.38" y="0"/>
+<wire x1="-119.38" y1="5.08" x2="-119.38" y2="0" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P+5" gate="1" pin="+24V"/>
@@ -2273,6 +2324,13 @@ Source: &lt;a href="https://cdn.harwin.com/pdfs/M20-876.pdf"&gt; Datasheet &lt;/
 <pinref part="J7" gate="G$1" pin="1"/>
 <junction x="-20.32" y="71.12"/>
 <wire x1="-20.32" y1="76.2" x2="-20.32" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="P+1" gate="1" pin="+12V"/>
+<junction x="60.96" y="124.46"/>
+<pinref part="J15" gate="G$1" pin="1"/>
+<junction x="60.96" y="119.38"/>
+<wire x1="60.96" y1="124.46" x2="60.96" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DBG_RX" class="0">
